@@ -17,7 +17,25 @@ div.absolute {
 }
 .hero {
   height: 100vh;
-  background: linear-gradient(-45deg, rgba(229,93,135,.7), rgba(95,195,228,.7)), url("../asset/img/DSC_0374.JPG") center center / cover no-repeat;
+  background:url("../asset/img/DSC_0374.JPG") center center / cover no-repeat;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero:before{
+  content: '';
+  background: inherit;/*.bgImageで設定した背景画像を継承する*/
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  position: absolute;
+  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;/*重なり順序を一番下にしておく*/
 }
 .hero h1 {
   color: white;
@@ -70,4 +88,23 @@ div.absolute {
 .btn-ghost.btn-white:hover {
   color: #333;
   background: #fff;
+}
+
+.shrikhand {
+  font-family: 'Shrikhand', cursive;
+}
+.chewy {
+  font-family: 'Chewy', cursive;
+}
+.permanent{
+  font-family: 'Permanent Marker', cursive;
+}
+.Rammetto{
+  font-family: 'Rammetto One', cursive;
+}
+.Mogra{
+  font-family: 'Mogra', cursive;
+}
+.itim{
+  font-family: 'Itim', cursive;
 }
